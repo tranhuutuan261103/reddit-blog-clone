@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./assets/css/reset.css";
-import "./assets/fonts/stylesheet.css";
 import Blog from "./views/Blog/Blog";
 import Comment from "./views/Comment/Comment";
+import Navbar from "./views/containers/Navbar/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Blog />} />
         <Route path="/comments" element={<Comment />} />
