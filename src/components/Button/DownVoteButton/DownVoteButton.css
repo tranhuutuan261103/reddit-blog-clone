@@ -12,7 +12,7 @@
 }
 
 .downVoteButton:hover {
-    background-color: #ebebeb;
+    background-color: var(--downVoteButton-hover-color, #e5e5e5);
 }
 
 .downVoteButton-icon {
@@ -22,7 +22,6 @@
 }
 
 .downVoteButton-icon line {
-    stroke: #000;
     stroke-width: 20px;
 }
 
