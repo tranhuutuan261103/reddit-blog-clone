@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Blog />} />
-        <Route path="/comments" element={<Comment />} />
+        <Route path="/comments/:id" element={<Comment />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </Router>

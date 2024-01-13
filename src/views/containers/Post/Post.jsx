@@ -1,8 +1,11 @@
 import React from "react";
 import './Post.css';
 import { UpVoteButton, DownVoteButton, CommentButton , ShareButton, SavePostButton } from "../../../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Post = ({ post }) => {
+    const navigate = useNavigate();
+
     const handleUpVote = () => {
         console.log("Up Vote");
     };
@@ -12,7 +15,7 @@ const Post = ({ post }) => {
     }
 
     const handleCommentBtnClick = () => {
-        console.log("Comment Button Clicked");
+        navigate("/comments/" + post.id);
     }
 
     const handleSavePostBtnClick = () => {

@@ -12,7 +12,7 @@
 }
 
 .upVoteButton:hover {
-    background-color: #ebebeb;
+    background-color: var( --upVoteButton-hover-color , #ebebeb);
 }
 
 .upVoteButton-icon {
@@ -22,7 +22,6 @@
 }
 
 .upVoteButton-icon line {
-    stroke: #000;
     stroke-width: 20px;
 }
 
