@@ -1,4 +1,9 @@
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +42,7 @@
 
 .navbar-search__input {
     padding: 10px 30px 10px 40px;
-    min-width: 300px;
+    min-width: 400px;
     border: 0.8px solid rgb(237, 239, 241);
     border-radius: 999px;
     background-color: #f6f7f8;
