@@ -1,5 +1,5 @@
-.shareButton {
-    background-color: #e8e8e8;
+.commentButton {
+    background-color: #fff;
     color: rgb(135, 138, 140);
     border: none;
     border-radius: 2px;
@@ -14,6 +14,6 @@
     font-size: 1.6rem;
 }
 
-.shareButton-text {
-    font-size: 1.6rem;
+.commentButton:hover {
+    background-color: #e8e8e8;
 }

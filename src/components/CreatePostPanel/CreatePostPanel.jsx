@@ -12,7 +12,7 @@ const CreatePostPanel = () => {
                 <img src="https://www.redditstatic.com/avatars/avatar_default_19_FF8717.png" alt="Profile" className="create-post-panel__profile-image" />
             </Link>
             <Link to="/createPost" className="create-post-panel__link-input">
-                <input className="create-post-panel__input" />
+                <input className="create-post-panel__input" placeholder="Create Post" />
             </Link>
             <Link to="/createPost" className="create-post-panel__link">
                 <FontAwesomeIcon icon={faImage} className="create-post-panel__link-icon" />
