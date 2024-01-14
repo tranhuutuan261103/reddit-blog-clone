@@ -12,3 +12,10 @@
     width: 1200px;
     background-color: #dae0e6;
 }
+
+.comment-body {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 30px;
+}

@@ -1,14 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './CommentHeader.css';
 import { UpVoteButton, DownVoteButton, CloseButton } from "../Button";
 
 const CommentHeader = () => {
+    const navigate = useNavigate();
     const handleUpVote = () => {
         console.log("upvote");
     }
 
     const handleDownVote = () => {
         console.log("downvote");
+    }
+
+    const handleCloseBtn = () => {
+        navigate("/");
     }
 
     return <div className="comment-header">
@@ -34,7 +40,7 @@ const CommentHeader = () => {
             />
         </div>
         <h2 className="comment-post-title">10x Stronger Than Kevlar: Amorphous Silicon Carbide Could Revolutionize </h2>
-        <CloseButton />
+        <CloseButton clickEvent={handleCloseBtn} />
     </div>;
 }
 
