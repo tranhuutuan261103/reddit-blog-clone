@@ -1,12 +1,36 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import './Navbar.css';
 import logo from '../../../assets/images/Reddit-Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { ToolStripProfile } from "../../../components";
 
 const Navbar = () => {
+    const [isShow, setIsShow] = useState(false);
+
+    window.onclick = (event) => {
+        const navbarProfile = document.querySelector(".navbar-profile");
+        const navbarProfileToolStrip = document.querySelector(".navbar-profile__toolStrip");
+
+        if (navbarProfileToolStrip.contains(event.target)) {
+            console.log("click inside");
+        } else if (navbarProfile.contains(event.target))
+        {
+            console.log("click inside 2");
+            setIsShow(!isShow);
+        } else {
+            console.log("click outside");
+            setIsShow(false);
+        }
+    }
+
+    const handleToolStripProfileClick = () => {
+        setIsShow(false);
+    }
+
     return (
         <div className="navbar">
             <Link to="/"><img src={logo} alt="logo" className="navbar-logo" /></Link>
@@ -40,6 +64,9 @@ const Navbar = () => {
                     <span className="navbar-profile-info__karma">Karma: 0</span>
                 </div>
                 <FontAwesomeIcon icon={faAngleDown} className="navbar-profile__icon" />
+                <div className="navbar-profile__toolStrip">
+                    <ToolStripProfile isShow={isShow} clickEvent={handleToolStripProfileClick} />
+                </div>
             </div>
         </div>
     );
