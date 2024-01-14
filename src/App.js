@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/reddit-blog-clone">
       {isPageNotFound ? null : <Navbar />}
       <Routes>
         <Route path="/" element={<Blog />} />
