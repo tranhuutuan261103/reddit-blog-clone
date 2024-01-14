@@ -1,16 +1,28 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Blog from "./views/Blog/Blog";
+import CreatePost from "./views/CreatePost/CreatePost";
 import Comment from "./views/Comment/Comment";
 import Navbar from "./views/containers/Navbar/Navbar";
+import Profile from "./views/Profile/Profile";
+import NotFound from "./views/NotFound/NotFound";
 
 function App() {
+  const [isPageNotFound, setIsPageNotFound] = useState(false);
+
+  const handleSetIsPageNotFound = (value) => {
+    setIsPageNotFound(value);
+  };
+
   return (
     <Router>
-      <Navbar />
+      {isPageNotFound ? null : <Navbar />}
       <Routes>
         <Route path="/" element={<Blog />} />
-        <Route path="/comments" element={<Comment />} />
-        <Route path="*" element={<h1>Not Found</h1>} />
+        <Route path="/createPost" element={<CreatePost />} />
+        <Route path="/comments/:id" element={<Comment />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NotFound setIsPageNotFound={handleSetIsPageNotFound} />} />
       </Routes>
     </Router>
   );
