@@ -14,18 +14,17 @@ const Navbar = () => {
     window.onclick = (event) => {
         const navbarProfile = document.querySelector(".navbar-profile");
         const navbarProfileToolStrip = document.querySelector(".navbar-profile__toolStrip");
-
-        if (navbarProfileToolStrip.contains(event.target)) {
+    
+        if (navbarProfileToolStrip && navbarProfileToolStrip.contains(event.target)) {
             console.log("click inside");
-        } else if (navbarProfile.contains(event.target))
-        {
+        } else if (navbarProfile && navbarProfile.contains(event.target)) {
             console.log("click inside 2");
             setIsShow(!isShow);
         } else {
             console.log("click outside");
             setIsShow(false);
         }
-    }
+    };
 
     const handleToolStripProfileClick = () => {
         setIsShow(false);
