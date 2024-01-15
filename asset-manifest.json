@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reddit-blog-clone/static/css/main.c91672f5.css",
-    "main.js": "/reddit-blog-clone/static/js/main.c79676de.js",
+    "main.css": "/reddit-blog-clone/static/css/main.f8ed0ba6.css",
+    "main.js": "/reddit-blog-clone/static/js/main.8b607cbe.js",
     "static/js/787.525bc4ea.chunk.js": "/reddit-blog-clone/static/js/787.525bc4ea.chunk.js",
     "static/media/Victory_in_Battle_of_Dien_Bien_Phu.jpg": "/reddit-blog-clone/static/media/Victory_in_Battle_of_Dien_Bien_Phu.1952f0c25b72e700fce0.jpg",
     "static/media/IBMPlexSans-ExtraLightItalic.woff": "/reddit-blog-clone/static/media/IBMPlexSans-ExtraLightItalic.28b6f9ee6dcdcfb7f680.woff",
@@ -35,12 +35,12 @@
     "static/media/Flag-map_of_Vietnam.png": "/reddit-blog-clone/static/media/Flag-map_of_Vietnam.ddf830ff38f67170a74b.png",
     "static/media/Reddit-Logo.png": "/reddit-blog-clone/static/media/Reddit-Logo.f6b607a8773c87b50e60.png",
     "index.html": "/reddit-blog-clone/index.html",
-    "main.c91672f5.css.map": "/reddit-blog-clone/static/css/main.c91672f5.css.map",
-    "main.c79676de.js.map": "/reddit-blog-clone/static/js/main.c79676de.js.map",
+    "main.f8ed0ba6.css.map": "/reddit-blog-clone/static/css/main.f8ed0ba6.css.map",
+    "main.8b607cbe.js.map": "/reddit-blog-clone/static/js/main.8b607cbe.js.map",
     "787.525bc4ea.chunk.js.map": "/reddit-blog-clone/static/js/787.525bc4ea.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c91672f5.css",
-    "static/js/main.c79676de.js"
+    "static/css/main.f8ed0ba6.css",
+    "static/js/main.8b607cbe.js"
   ]
 }
