@@ -14,7 +14,7 @@ const CommentHeader = () => {
     }
 
     const handleCloseBtn = () => {
-        navigate("/");
+        navigate("/posts");
     }
 
     return <div className="comment-header">
