@@ -17,7 +17,7 @@ const QuickAccess = () => {
                 </div>
             </div>
             <div className="quick-access__links">
-                <Link to="./createPost" className="quick-access__link quick-access__link-createPost">Create Post</Link>
+                <Link to="./posts/create" className="quick-access__link quick-access__link-createPost">Create Post</Link>
                 <Link to="./createCommunity" className="quick-access__link quick-access__link-createCommunity">Create Community</Link>
             </div>
         </div>

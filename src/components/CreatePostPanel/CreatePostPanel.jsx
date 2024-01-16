@@ -11,13 +11,13 @@ const CreatePostPanel = () => {
             <Link to="/profile" className="create-post-panel__link">
                 <img src="https://www.redditstatic.com/avatars/avatar_default_19_FF8717.png" alt="Profile" className="create-post-panel__profile-image" />
             </Link>
-            <Link to="/createPost" className="create-post-panel__link-input">
+            <Link to="/posts/create" className="create-post-panel__link-input">
                 <input className="create-post-panel__input" placeholder="Create Post" />
             </Link>
-            <Link to="/createPost" className="create-post-panel__link">
+            <Link to="/posts/create" className="create-post-panel__link">
                 <FontAwesomeIcon icon={faImage} className="create-post-panel__link-icon" />
             </Link>
-            <Link to="/createPost" className="create-post-panel__link">
+            <Link to="/posts/create" className="create-post-panel__link">
                 <FontAwesomeIcon icon={faLink} className="create-post-panel__link-icon" />
             </Link>
         </div>
