@@ -1,5 +1,6 @@
 import React from "react";
 import './Blog.css';
+import { BackToTopButton } from "../../components/Button";
 import { CreatePostPanel, FilterPosts, QuickAccess } from "../../components";
 import Post from "../containers/Post/Post";
 
@@ -52,6 +53,7 @@ const Blog = () => {
             <div className="blog-right">
                 <QuickAccess />
             </div>
+            <BackToTopButton />
         </div>
     );
 };
