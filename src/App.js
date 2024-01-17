@@ -21,7 +21,7 @@ function App() {
         <Route path="/posts" element={<Blog />} />
         <Route path="/posts/create" element={<CreatePost />} />
         <Route path="/comments/:id" element={<Comment />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/*" element={<Profile />} />
         <Route path="*" element={<NotFound setIsPageNotFound={handleSetIsPageNotFound} />} />
       </Routes>
     </Router>
