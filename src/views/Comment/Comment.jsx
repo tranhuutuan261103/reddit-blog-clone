@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import './Comment.css';
 import { CommentHeader } from "../../components";
 import { CommentMain, FollowLecture } from "../containers";
+import { BackToTopButton } from "../../components/Button";
 const Comment = () => {
     const { id: idPost } = useParams();
 
@@ -14,6 +15,7 @@ const Comment = () => {
                 <FollowLecture />
             </div>
         </div>
+        <BackToTopButton />
     </div>;
 };
 
