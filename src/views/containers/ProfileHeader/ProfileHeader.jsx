@@ -17,6 +17,15 @@ const ProfileHeader = ({ profile }) => {
     return (
         <div className="profileHeader">
             <ul className="profileHeader__menu">
+            <li className="profileHeader__menuItem">
+                    <Link 
+                        to={rootPath + ""} 
+                        className="profileHeader__menuItem-link profileHeader__menuItem-link--active"
+                        onClick={handleActiveLink}
+                    >
+                        Overview
+                    </Link>
+                </li>
                 <li className="profileHeader__menuItem">
                     <Link 
                         to={rootPath + "/posts"} 

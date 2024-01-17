@@ -13,10 +13,17 @@
     border-bottom: 1px solid #edeff1;
 }
 
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .navbar-logo {
     width: 120px;
-    display: block;
-    background-size: contain;
+    height: 100%;
+    object-fit: cover;
 }
 
 .navbar-search-form {

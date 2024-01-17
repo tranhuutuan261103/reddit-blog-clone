@@ -2,6 +2,11 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import './Profile.css';
 import { ProfileHeader } from '../containers';
+import ProfileOverview from "../ProfileOverview/ProfileOverview";
+import MyPost from "../MyPost/MyPost";
+import SavedPost from "../SavedPost/SavedPost";
+import UpvotedPost from "../UpvotedPost/UpvotedPost";
+import DownvotedPost from "../DownvotedPost/DownvotedPost";
 
 const profile = {
     id: 1,
@@ -16,10 +21,11 @@ const Profile = () => {
             <ProfileHeader profile={profile} />
             <div className="profile__content">
                 <Routes>
-                    <Route path="/:username/posts" element={<h1>Posts</h1>} />
-                    <Route path="/:username/saved" element={<h1>Saved</h1>} />
-                    <Route path="/:username/upvoted" element={<h1>Upvoted</h1>} />
-                    <Route path="/:username/downvoted" element={<h1>Downvoted</h1>} />
+                    <Route path="/:username" element={<ProfileOverview />} />
+                    <Route path="/:username/posts" element={<MyPost />} />
+                    <Route path="/:username/saved" element={<SavedPost />} />
+                    <Route path="/:username/upvoted" element={<UpvotedPost />} />
+                    <Route path="/:username/downvoted" element={<DownvotedPost />} />
                 </Routes>
             </div>
         </div>
