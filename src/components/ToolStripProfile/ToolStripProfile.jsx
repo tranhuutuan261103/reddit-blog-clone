@@ -19,7 +19,7 @@ const ToolStripProfile = ({ isShow, clickEvent }) => {
                         My Stuff
                     </span>
                     <ul className="ToolStripProfile-item__subitem-list">
-                        <Link to="/profile" className="ToolStripProfile-item__subitem-link" onClick={clickEvent}>Profile</Link>
+                        <Link to="/profile/tuanne" className="ToolStripProfile-item__subitem-link" onClick={clickEvent}>Profile</Link>
                         <Link to="/settings" className="ToolStripProfile-item__subitem-link" onClick={clickEvent}>User Settings</Link>
                     </ul>
                 </li>

@@ -32,7 +32,9 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <Link to="/posts"><img src={logo} alt="logo" className="navbar-logo" /></Link>
+            <Link to="/posts" className="navbar-logo-link">
+                <img src={logo} alt="logo" className="navbar-logo" />
+            </Link>
             <div className="navbar-search-form">
                 <label htmlFor="navbar-search" className="navbar-search__label">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="navbar-search-label__icon" />

@@ -1,0 +1,18 @@
+.saved-post {
+    padding: 16px 32px;
+    width: 100%;
+}
+
+.saved-post__container {
+    display: flex;
+    gap: 32px;
+}
+
+.saved-post__left {
+    width: 100%;
+}
+
+.saved-post__right {
+    width: 400px;
+    background-color: red;
+}

@@ -1,0 +1,18 @@
+.my-post {
+    padding: 16px 32px;
+    width: 100%;
+}
+
+.my-post__container {
+    display: flex;
+    gap: 32px;
+}
+
+.my-post__left {
+    width: 100%;
+}
+
+.my-post__right {
+    width: 400px;
+    background-color: red;
+}
