@@ -11,8 +11,3 @@
 .downvoted-post__left {
     width: 100%;
 }
-
-.downvoted-post__right {
-    width: 400px;
-    background-color: red;
-}
