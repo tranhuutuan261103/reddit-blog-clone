@@ -1,6 +1,6 @@
 import React from "react";
 import './DownvotedPost.css';
-import { PostSkeleton } from '../../components';
+import { PostSkeleton, ProfilePanel } from '../../components';
 
 const DownvotedPost = () => {
     return (
@@ -14,7 +14,7 @@ const DownvotedPost = () => {
                     }
                 </div>
                 <div className="downvoted-post__right">
-                    <h1>Profile</h1>
+                    <ProfilePanel />
                 </div>
             </div>
         </div>

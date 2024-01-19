@@ -1,6 +1,6 @@
 import React from "react";
 import './MyPost.css';
-import { PostSkeleton } from "../../components";
+import { PostSkeleton, ProfilePanel } from "../../components";
 
 const MyPost = () => {
     return (
@@ -14,7 +14,7 @@ const MyPost = () => {
                     }
                 </div>
                 <div className="my-post__right">
-                    <h1>Profile</h1>
+                    <ProfilePanel />
                 </div>
             </div>
         </div>
