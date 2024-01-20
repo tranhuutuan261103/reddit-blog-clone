@@ -6,6 +6,7 @@ import ProfileOverview from "../ProfileOverview/ProfileOverview";
 import SavedPost from "../SavedPost/SavedPost";
 import UpvotedPost from "../UpvotedPost/UpvotedPost";
 import DownvotedPost from "../DownvotedPost/DownvotedPost";
+import Notification from "../Notification/Notification";
 
 const profile = {
     id: 1,
@@ -24,6 +25,7 @@ const Profile = () => {
                     <Route path="/:username/saved" element={<SavedPost />} />
                     <Route path="/:username/upvoted" element={<UpvotedPost />} />
                     <Route path="/:username/downvoted" element={<DownvotedPost />} />
+                    <Route path="/:username/notifications" element={<Notification />} />
                 </Routes>
             </div>
         </div>
