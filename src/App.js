@@ -18,10 +18,10 @@ function App() {
     <Router basename="/reddit-blog-clone">
       {isPageNotFound ? null : <Navbar />}
       <Routes>
-        <Route path="/" element={<Blog />} />
-        <Route path="/createPost" element={<CreatePost />} />
+        <Route path="/posts" element={<Blog />} />
+        <Route path="/posts/create" element={<CreatePost />} />
         <Route path="/comments/:id" element={<Comment />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/*" element={<Profile />} />
         <Route path="*" element={<NotFound setIsPageNotFound={handleSetIsPageNotFound} />} />
       </Routes>
     </Router>

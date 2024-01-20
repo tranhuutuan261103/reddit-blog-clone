@@ -1,8 +1,7 @@
 import React from "react";
-import './Blog.css';
-import { BackToTopButton } from "../../components/Button";
-import { CreatePostPanel, FilterPosts, QuickAccess } from "../../components";
-import Post from "../containers/Post/Post";
+import './ProfileOverview.css';
+import { PostSkeleton, ProfilePanel } from "../../components";
+import { PostPanel } from "../containers";
 
 const posts = [
     {
@@ -39,23 +38,38 @@ const posts = [
     }
 ];
 
-const Blog = () => {
-
+const ProfileOverview = () => {
     return (
-        <div className="blog">
-            <div className="blog-left">
-                <CreatePostPanel />
-                <FilterPosts />
-                <div className="posts">
-                    {posts.map((post) => (<Post key={post.id} post={post}/>))}
+        <div className="profile-overview">
+            <div className="profile-overview__container">
+                <div className="profile-overview__left">
+                    {
+                        posts.length > 0?
+                            posts.map((post) => (
+                                <PostPanel key={post.id} post={post} />
+                            ))
+                        :
+                            [...Array(10)].map((_, index) => (
+                                <PostSkeleton key={index} />
+                            ))
+                    }
+                </div>
+                <div className="profile-overview__right">
+                    <ProfilePanel />
+                    <div className="profile-overview__right-info">
+                        <div className="profile-overview__right-info__posts">
+                            <span className="profile-overview__right-info__posts-count">{posts.length}</span>
+                            <span className="profile-overview__right-info__posts-label">posts</span>
+                        </div>
+                        <div className="profile-overview__right-info__comments">
+                            <span className="profile-overview__right-info__comments-count">10</span>
+                            <span className="profile-overview__right-info__comments-label">comments</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="blog-right">
-                <QuickAccess />
-            </div>
-            <BackToTopButton />
         </div>
-    );
-};
+    )
+}
 
-export default Blog;
+export default ProfileOverview;

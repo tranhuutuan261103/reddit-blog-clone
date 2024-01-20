@@ -16,12 +16,12 @@ const Navbar = () => {
         const navbarProfileToolStrip = document.querySelector(".navbar-profile__toolStrip");
     
         if (navbarProfileToolStrip && navbarProfileToolStrip.contains(event.target)) {
-            console.log("click inside");
+            // click inside
         } else if (navbarProfile && navbarProfile.contains(event.target)) {
-            console.log("click inside 2");
+            // click inside
             setIsShow(!isShow);
         } else {
-            console.log("click outside");
+            // click outside
             setIsShow(false);
         }
     };
@@ -32,7 +32,9 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <Link to="/"><img src={logo} alt="logo" className="navbar-logo" /></Link>
+            <Link to="/posts" className="navbar-logo-link">
+                <img src={logo} alt="logo" className="navbar-logo" />
+            </Link>
             <div className="navbar-search-form">
                 <label htmlFor="navbar-search" className="navbar-search__label">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="navbar-search-label__icon" />
@@ -46,7 +48,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className="navbar-item">
-                    <Link to="/createPost" className="navbar-item__link">
+                    <Link to="/posts/create" className="navbar-item__link">
                         <svg id="evqk9MwIJV11" className="navbar-tem__icon" viewBox="0 0 100 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                             <line x1="-50" y1="0" x2="50" y2="0" transform="translate(50 50)" fill="none" stroke="rgb(26, 26, 27)" strokeWidth="5"/>
                             <line x1="0" y1="-50" x2="0" y2="50" transform="translate(50 50)" fill="none" stroke="rgb(26, 26, 27)" strokeWidth="5"/>
@@ -64,7 +66,7 @@ const Navbar = () => {
                 </div>
                 <FontAwesomeIcon icon={faAngleDown} className="navbar-profile__icon" />
                 <div className="navbar-profile__toolStrip">
-                    <ToolStripProfile isShow={isShow} clickEvent={handleToolStripProfileClick} />
+                    <ToolStripProfile username={"tuanne"} isShow={isShow} clickEvent={handleToolStripProfileClick} />
                 </div>
             </div>
         </div>

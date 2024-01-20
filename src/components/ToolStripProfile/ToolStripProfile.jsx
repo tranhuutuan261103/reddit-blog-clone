@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
-const ToolStripProfile = ({ isShow, clickEvent }) => {
+const ToolStripProfile = ({ username , isShow, clickEvent }) => {
     return (
         <div className="ToolStripProfile" style={
             {
@@ -19,7 +19,7 @@ const ToolStripProfile = ({ isShow, clickEvent }) => {
                         My Stuff
                     </span>
                     <ul className="ToolStripProfile-item__subitem-list">
-                        <Link to="/profile" className="ToolStripProfile-item__subitem-link" onClick={clickEvent}>Profile</Link>
+                        <Link to={"/profile/" + username} className="ToolStripProfile-item__subitem-link" onClick={clickEvent}>Profile</Link>
                         <Link to="/settings" className="ToolStripProfile-item__subitem-link" onClick={clickEvent}>User Settings</Link>
                     </ul>
                 </li>
