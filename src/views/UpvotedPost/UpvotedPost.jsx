@@ -25,7 +25,7 @@ const UpvotedPost = () => {
                             null
                         :
                         <div className="upvoted-post__left-no-posts">
-                            <h2 className="upvoted-post__left-no-posts__title">hmm... looks like you haven't downvoted anything yet</h2>
+                            <h2 className="upvoted-post__left-no-posts__title">hmm... looks like you haven't upvoted anything yet</h2>
                         </div>
                     }
                 </div>

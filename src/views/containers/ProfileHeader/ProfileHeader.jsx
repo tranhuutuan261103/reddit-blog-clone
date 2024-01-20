@@ -53,6 +53,15 @@ const ProfileHeader = ({ profile }) => {
                         Downvoted
                     </Link>
                 </li>
+                <li className="profileHeader__menuItem">
+                    <Link 
+                        to={rootPath + "/notifications"} 
+                        className="profileHeader__menuItem-link"
+                        onClick={handleActiveLink}
+                    >
+                        Notifications
+                    </Link>
+                </li>
             </ul>
         </div>
     )

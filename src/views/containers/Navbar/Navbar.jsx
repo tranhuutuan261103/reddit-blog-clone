@@ -7,11 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { ToolStripProfile } from "../../../components";
+import { NotificationPanel } from "../../containers";
 
 const Navbar = () => {
     const [isShow, setIsShow] = useState(false);
 
+    const handleToolStripProfileClick = () => {
+        setIsShow(!isShow);
+    }
+
     window.onclick = (event) => {
+        // ToolStrip Profile
         const navbarProfile = document.querySelector(".navbar-profile");
         const navbarProfileToolStrip = document.querySelector(".navbar-profile__toolStrip");
     
@@ -24,10 +30,26 @@ const Navbar = () => {
             // click outside
             setIsShow(false);
         }
+
+        // Notification Panel
+        const navbarItemNotification = document.querySelector(".navbar-item__notification");
+        const navbarItemNotificationPanel = document.querySelector(".navbar-item__notification-panel");
+    
+        if (navbarItemNotificationPanel && navbarItemNotificationPanel.contains(event.target)) {
+            // click inside
+        } else if (navbarItemNotification && navbarItemNotification.contains(event.target)) {
+            // click inside
+            setIsShowNotificationPanel(!isShowNotificationPanel);
+        } else {
+            // click outside
+            setIsShowNotificationPanel(false);
+        }
     };
 
-    const handleToolStripProfileClick = () => {
-        setIsShow(false);
+    const [isShowNotificationPanel, setIsShowNotificationPanel] = useState(false);
+
+    const handleNotificationPanelClick = () => {
+        setIsShowNotificationPanel(!isShowNotificationPanel);
     }
 
     return (
@@ -42,10 +64,16 @@ const Navbar = () => {
                 <input type="text" id="navbar-search" className="navbar-search__input" placeholder="Search Reddit" />
             </div>
             <ul className="navbar-list">
-                <li className="navbar-item">
-                    <Link to="/announce" className="navbar-item__link">
+                <li className="navbar-item navbar-item__notification">
+                    <button className="navbar-item__link">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112v25.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V208c0-61.9 50.1-112 112-112zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"/></svg>
-                    </Link>
+                    </button>
+                    <div className="navbar-item__notification-panel">
+                        <NotificationPanel 
+                            isShow={isShowNotificationPanel} 
+                            clickEvent={handleNotificationPanelClick} 
+                        />
+                    </div>
                 </li>
                 <li className="navbar-item">
                     <Link to="/posts/create" className="navbar-item__link">
