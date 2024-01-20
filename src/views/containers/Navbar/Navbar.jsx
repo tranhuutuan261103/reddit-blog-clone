@@ -16,12 +16,12 @@ const Navbar = () => {
         const navbarProfileToolStrip = document.querySelector(".navbar-profile__toolStrip");
     
         if (navbarProfileToolStrip && navbarProfileToolStrip.contains(event.target)) {
-            console.log("click inside");
+            // click inside
         } else if (navbarProfile && navbarProfile.contains(event.target)) {
-            console.log("click inside 2");
+            // click inside
             setIsShow(!isShow);
         } else {
-            console.log("click outside");
+            // click outside
             setIsShow(false);
         }
     };
@@ -66,7 +66,7 @@ const Navbar = () => {
                 </div>
                 <FontAwesomeIcon icon={faAngleDown} className="navbar-profile__icon" />
                 <div className="navbar-profile__toolStrip">
-                    <ToolStripProfile isShow={isShow} clickEvent={handleToolStripProfileClick} />
+                    <ToolStripProfile username={"tuanne"} isShow={isShow} clickEvent={handleToolStripProfileClick} />
                 </div>
             </div>
         </div>

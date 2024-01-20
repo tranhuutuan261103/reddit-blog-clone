@@ -28,15 +28,6 @@ const ProfileHeader = ({ profile }) => {
                 </li>
                 <li className="profileHeader__menuItem">
                     <Link 
-                        to={rootPath + "/posts"} 
-                        className="profileHeader__menuItem-link"
-                        onClick={handleActiveLink}
-                    >
-                        Posts
-                    </Link>
-                </li>
-                <li className="profileHeader__menuItem">
-                    <Link 
                         to={rootPath + "/saved"} 
                         className="profileHeader__menuItem-link"
                         onClick={handleActiveLink}
