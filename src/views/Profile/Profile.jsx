@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import './Profile.css';
 import { ProfileHeader } from '../containers';
 import ProfileOverview from "../ProfileOverview/ProfileOverview";
-import MyPost from "../MyPost/MyPost";
 import SavedPost from "../SavedPost/SavedPost";
 import UpvotedPost from "../UpvotedPost/UpvotedPost";
 import DownvotedPost from "../DownvotedPost/DownvotedPost";
@@ -22,7 +21,6 @@ const Profile = () => {
             <div className="profile__content">
                 <Routes>
                     <Route path="/:username" element={<ProfileOverview />} />
-                    <Route path="/:username/posts" element={<MyPost />} />
                     <Route path="/:username/saved" element={<SavedPost />} />
                     <Route path="/:username/upvoted" element={<UpvotedPost />} />
                     <Route path="/:username/downvoted" element={<DownvotedPost />} />
