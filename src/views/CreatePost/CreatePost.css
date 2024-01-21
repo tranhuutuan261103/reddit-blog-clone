@@ -42,6 +42,10 @@ strong {
     font-weight: 600;
 }
 
+.ql-editor {
+    min-height: 300px;
+}
+
 /* Body */
 .createPost-left__body {
     background-color: #fff;
@@ -66,7 +70,6 @@ strong {
 /* Content */
 
 .createPost-left__body-content-editor {
-    min-height: 230px;
     overflow-y: auto; /* Add vertical scrolling when the content exceeds the height */
 }
 
