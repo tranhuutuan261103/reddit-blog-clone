@@ -6,6 +6,7 @@ import Comment from "./views/Comment/Comment";
 import Navbar from "./views/containers/Navbar/Navbar";
 import Profile from "./views/Profile/Profile";
 import NotFound from "./views/NotFound/NotFound";
+import { PostProvider } from "./contexts/PostContext";
 
 function App() {
   const [isPageNotFound, setIsPageNotFound] = useState(false);
@@ -20,7 +21,13 @@ function App() {
       <Routes>
         <Route path="/posts" element={<Blog />} />
         <Route path="/posts/create" element={<CreatePost />} />
-        <Route path="/comments/:id" element={<Comment />} />
+        <Route 
+          path="/comments/:id" 
+          element={
+            <PostProvider>
+              <Comment />
+            </PostProvider>
+          } />
         <Route path="/profile/*" element={<Profile />} />
         <Route path="*" element={<NotFound setIsPageNotFound={handleSetIsPageNotFound} />} />
       </Routes>

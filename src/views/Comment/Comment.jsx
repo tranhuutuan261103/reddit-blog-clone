@@ -1,17 +1,18 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import './Comment.css';
+import { usePost } from "../../contexts/PostContext"
 import { CommentHeader } from "../../components";
 import { CommentMain, FollowLecture } from "../containers";
 import { BackToTopButton } from "../../components/Button";
+
 const Comment = () => {
-    const { id: idPost } = useParams();
+    const { post, rootComments, createLocalComment } = usePost()
 
     return <div className="comments">
         <div className="comment-container">
             <CommentHeader />
             <div className="comment-body">
-                <CommentMain idPost={idPost} />
+                <CommentMain post={post} rootComments={rootComments} />
                 <FollowLecture />
             </div>
         </div>

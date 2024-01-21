@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import ReactQuill from 'react-quill';
 import './CreatePost.css';
 import 'react-quill/dist/quill.snow.css';
@@ -36,6 +37,15 @@ const lectures = [
 ];
 
 const CreatePost = () => {
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+
+    const handleSubmitCreatePost = () => {
+        console.log("Create post");
+        console.log("Title:" + title);
+        console.log("Content:" + content);
+    }
+
     return (
         <div className="createPost">
             <div className="createPost-left">
@@ -44,7 +54,11 @@ const CreatePost = () => {
                 </div>
                 <div className="createPost-left__body">
                     <div className="createPost-left__body-title">
-                        <input type="text" placeholder="Title" />
+                        <input 
+                            type="text" 
+                            placeholder="Title" 
+                            onChange={(e) => setTitle(e.target.value)}
+                        />
                     </div>
                     <div className="createPost-left__body-content">
                         <ReactQuill 
@@ -52,10 +66,11 @@ const CreatePost = () => {
                             modules={modules}
                             className="createPost-left__body-content-editor"
                             placeholder="Content"
-                         />
+                            onChange={setContent}
+                        />
                     </div>
                     <div className="createPost-left__body-footer">
-                        <button className="createPost-left__body-footer-btn">Post</button>
+                        <button className="createPost-left__body-footer-btn" onClick={handleSubmitCreatePost}>Post</button>
                     </div>
                 </div>
             </div>
